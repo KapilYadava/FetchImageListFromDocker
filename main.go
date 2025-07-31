@@ -8,12 +8,16 @@ import (
 )
 
 func main() {
-	fmt.Println("hello from go")
 	repoPath := "/mnt/c/Users/A200154986/OSC/DiffCommitExample"
 	repo, err := git.PlainOpen(repoPath)
 	if err != nil {
 		log.Fatalf("could not open repository: %v", err)
 	}
 
-	fmt.Println(repo.Head())
+	ref, err := repo.Head()
+	if err != nil {
+		log.Fatalf("could not get head: %v", err)
+	}
+
+	fmt.Println(ref.Hash())
 }
