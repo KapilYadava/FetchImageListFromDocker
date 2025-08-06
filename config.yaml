@@ -1,0 +1,9 @@
+username: $app
+password: registry-access-token
+registry_url: docker-registry
+compartment_ocid: xxx/xxx/xxx
+image_repository: image-repo
+#image_tag: latest
+client_id: notused
+client_secret: notused
+access_token: notused
